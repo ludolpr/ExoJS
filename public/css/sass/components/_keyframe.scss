@@ -1,0 +1,89 @@
+//  keyframe linear gradiant
+@keyframes gradient{
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* keyframe pour flèche vers le bas avec rotation */
+.menuDeroulant{
+    height:100%;
+  }
+
+.menuDeroulant > a:after{
+  content: '❯';
+  font-size: 15px;
+  margin-left: 5px;
+  display:inline-block;
+    
+}
+
+.sousMenu {
+  margin-top: var(--hauteur-menu);
+  width:100%;
+  // text-align: ;
+  // background-color:;
+  
+  // border-radius:;
+  // overflow: hidden;
+  // max-height: 0;
+  // box-sizing: border-box;
+  
+}
+
+.sousMenu > li > a {
+  height:50px;
+  padding-left: 20px;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  
+  
+}
+
+nav > ul > li:hover > a { color:white;
+
+}
+
+.sousMenu > li:hover > a {
+color:white;
+
+}
+
+@keyframes rotationFleche {
+0% {
+  transform: rotate(0deg);
+}
+100%{
+  transform: rotate(90deg);
+}
+}
+
+.menuDeroulant:hover > a:after {
+animation: rotationFleche 0.2s linear forwards;
+}
+
+@keyframes apparitionSousMenu {
+0% {
+  box-shadow: 0px 3px 3px 1px rgba(0,0,0,0);
+  border-top: 3px solid ;
+}
+30% {
+  box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+}
+100% {
+  max-height: 50em;
+  border-top: 3px solid ;
+  box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+}
+}
+
+.menuDeroulant:hover > .sousMenu {
+animation: apparitionSousMenu 1s forwards;
+}
