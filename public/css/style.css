@@ -9434,6 +9434,8 @@ tbody tr td img {
   background-color: #ffd166; }
 
 canvas {
-  margin-left: 30%; }
+  margin-left: 30%;
+  width: 628;
+  height: 628; }
 
 /*# sourceMappingURL=style.css.map */
