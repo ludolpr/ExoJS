@@ -1,4 +1,6 @@
 // creation des élements
+let div = document.createElement("div")
+let div1 = document.createElement("div")
 let h1 = document.createElement("h1");
 let p = document.createElement("p");
 let p2 = document.createElement("p");
@@ -7,6 +9,8 @@ let btn = document.createElement("button");
 let p3 = document.createElement("p");
 let h2 = document.createElement("h2");
 // selectionner les elementes + ajout d'un attribut
+div.setAttribute("class","mh100 mt250 container p-5 w-50 d-flex")
+div1.setAttribute("class"," row col-md-12 d-flex justify-content-center")
 btn.setAttribute("id", "click");
 h2.setAttribute("id", "timer");
 input.setAttribute("id","input");
@@ -33,13 +37,15 @@ h2.innerHTML = "Go !";
 let body = document.body;
 
 // Gestion des Enfants par rapport au Body
-body.appendChild(h1);
-body.appendChild(p);
-body.appendChild(p2);
-body.appendChild(input);
-body.appendChild(btn);
-body.appendChild(p3);
-body.appendChild(h2);
+body.appendChild(div)
+div.appendChild(div1)
+div1.appendChild(h1);
+div1.appendChild(p);
+div1.appendChild(p2);
+div1.appendChild(input);
+div1.appendChild(btn);
+div1.appendChild(p3);
+div1.appendChild(h2);
 
 // timer
 const departMinutes = 1.5;
@@ -91,7 +97,8 @@ document.getElementById("input")
             document.getElementById("click").click();
         }
         
-    });
+    }); 
+    console.log("click");
 function outputNumbers() {
   let numJoueur = input.value;
 

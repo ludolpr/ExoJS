@@ -26,6 +26,9 @@ app.get('/', function (req,res) {
     res.render('home')
    
 })
+app.get('/pageMain', function (req,res) {
+    res.render('pageMain')
+});
 app.get('/calculatrice', function (req,res) {
     res.render('calculatrice')
 });
@@ -33,6 +36,20 @@ app.get('/calculatrice', function (req,res) {
 app.get('/guestnumber', function (req,res) {
     res.render('guestnumber')
 });
+app.get('/pixabay', function (req,res) {
+    res.render('pixabay')
+});
+app.get('/pfcp', function (req,res) {
+    res.render('pfcp')
+});
+app.get('/todoList', function (req,res) {
+    res.render('todoList')
+});
+app.get('/bubbleShoot', function (req,res) {
+    res.render('bubbleShoot')
+});
+
+
 
 // run server
 app.listen(2022);

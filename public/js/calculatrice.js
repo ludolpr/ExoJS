@@ -1,5 +1,7 @@
 
 
+
+
 // changer document et le mettre directement en body.appendChild ....
 let body = document.body;
 
@@ -59,12 +61,14 @@ let td17 = document.createElement("td");
 let td18 = document.createElement("td");
 
 // selectionner les elements + ajout d'un attribut
-div.setAttribute("class"," col-md-12 row m-0")
-div2.setAttribute("class", "mh100 col-md-12 justyfy-content-center")
+div.setAttribute("class","mh100 mt250 container p-5 ")
+div2.setAttribute("class", "row  col-md-12 d-flex justify-content-center")
 
 button1.setAttribute("class","btnCalc")
+button16.setAttribute("id","click")
 h1.setAttribute("class", "text-center")
-input.setAttribute("placeholder", "Calcule")
+input.setAttribute("placeholder", "Calculer")
+input.setAttribute("type","text")
 table.setAttribute("border","1")
 
 // les td options
@@ -128,8 +132,8 @@ table.innerHTML= "";
 
 // Gestion des Enfants dans le Body = Page HTML
 body.appendChild(div)
-div.appendChild(h1)
 div.appendChild(div2)
+div2.appendChild(h1)
 div2.appendChild(table)
 
 // zone de calcule
@@ -188,16 +192,34 @@ td18.appendChild(button17)
 function calculer(){
     let a = document.getElementById("output").value
     let b = eval(a)
+
+    console.log('calcul fn', a, b)
     document.getElementById("output").value = b
 }
 
 // fonction qui affiche la valeur
 function afficher(val){
     var t1 = document.getElementById("output").value+=val
-// console.log(val, t1);
+    // console.log(val, t1);
 }
 
 console.log("okddd")
 function effacer (){
     document.getElementById("output").value=""
 }
+
+
+
+
+// fonction pour garder la touche entrer pret à l'emploie
+    
+document.body.onkeydown = function (e) {
+    if (e.keyCode === 13) {
+        calculer()
+        console.log('voila')
+        
+    e.preventDefault();
+};
+}
+// focus de mon input
+document.getElementById('input').focus();
