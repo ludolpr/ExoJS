@@ -45,8 +45,11 @@ app.get('/pfcp', function (req,res) {
 app.get('/todoList', function (req,res) {
     res.render('todoList')
 });
-app.get('/bubbleShoot', function (req,res) {
-    res.render('bubbleShoot')
+app.get('/qrCode', function (req,res) {
+    res.render('qrCode')
+});
+app.get('/darkMode', function (req,res) {
+    res.render('darkMode')
 });
 
 
