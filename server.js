@@ -51,6 +51,9 @@ app.get('/qrCode', function (req,res) {
 app.get('/darkMode', function (req,res) {
     res.render('darkMode')
 });
+app.get('/batonnets', function (req,res) {
+    res.render('batonnets')
+});
 
 
 
